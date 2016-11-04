@@ -2,6 +2,7 @@ using System;
 using System.Data.Entity;
 using ContactFormWithEmail.Controllers;
 using ContactFormWithEmail.Models;
+using ContactFormWithEmail.Services;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
@@ -47,6 +48,7 @@ namespace ContactFormWithEmail.App_Start
             container.RegisterType<DbContext, ApplicationDbContext>();
             container.RegisterType<ApplicationUserManager>();
             container.RegisterType<AccountController>(new InjectionConstructor());
+            container.RegisterType<ITheEmailService, TheEmailService>();
         }
     }
 }

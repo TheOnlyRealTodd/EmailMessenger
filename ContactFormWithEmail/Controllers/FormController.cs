@@ -12,9 +12,11 @@ namespace ContactFormWithEmail.Controllers
     public class FormController : Controller
     {
         private readonly IRepository<Message> _messageRepository;
-        public FormController(IRepository<Message> messageRepository)
+        private ITheEmailService _sendGrid;
+        public FormController(IRepository<Message> messageRepository, ITheEmailService sendGrid)
         {
             _messageRepository = messageRepository;
+            _sendGrid = sendGrid;
         }
         //HTTP GET: Form
         [HttpGet]
@@ -56,8 +58,7 @@ namespace ContactFormWithEmail.Controllers
 
         public async Task<ActionResult> SendEmail(Message message)
         {
-            ITheEmailService sendGrid = new TheEmailService();
-           await sendGrid.SendAsync(message);
+           await _sendGrid.SendAsync(message);
             MessageViewModel viewModel = new MessageViewModel(new Message());
             viewModel.Success = true;
             return View("index",viewModel);

@@ -59,11 +59,11 @@ namespace ContactFormWithEmail
                appId: ConfigurationManager.AppSettings["FacebookAppId"],
                appSecret: ConfigurationManager.AppSettings["FacebookAppSecret"]);
 
-            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            {
-                ClientId = ConfigurationManager.AppSettings["GoogleClientId"],
-                ClientSecret = ConfigurationManager.AppSettings["GoogleClientSecret"]
-            });
+            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            //{
+            //    ClientId = ConfigurationManager.AppSettings["GoogleClientId"],
+            //    ClientSecret = ConfigurationManager.AppSettings["GoogleClientSecret"]
+            //});
         }
     }
 }

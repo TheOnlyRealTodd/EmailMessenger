@@ -31,7 +31,6 @@ D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\Microsoft
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\Microsoft.Owin.Security.dll
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\Owin.dll
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.dll
-D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\Microsoft.Owin.Security.Google.dll
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\SendGridMail.dll
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.dll
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\EntityFramework.dll
@@ -55,7 +54,6 @@ D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\Microsoft
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\Microsoft.AspNet.Identity.Owin.xml
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\Microsoft.Owin.Security.xml
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\Microsoft.Owin.Security.Cookies.xml
-D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\Microsoft.Owin.Security.Google.xml
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\EntityFramework.xml
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\Microsoft.Practices.Unity.xml
