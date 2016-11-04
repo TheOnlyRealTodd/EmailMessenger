@@ -1,0 +1,24 @@
+﻿@model IList<ContactFormWithEmail.Models.Message>
+
+@{
+    ViewBag.Title = "Emails In Database";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Emails In Database</h2>
+
+@{
+
+    foreach (var m in Model)
+    {
+        <div class="well">
+            <h2 class="emailHeader">Sender Name: @m.SenderName</h2>
+            <p><span class="emailHeadInfo">Sender Email:</span> @m.SenderEmail</p>
+            <p><span class="emailHeadInfo">Recipient Email:</span>@m.RecipientEmail</p>
+            <p><span class="emailHeadInfo">Subject:</span> @m.Subject</p>
+            <p><span class="emailHeadInfo">Time sent:</span> @m.TimeStamp</p>
+            <h2 class="emailBodyHeader">Body</h2>
+            <p class="emailHeadInfo">@m.Body</p>
+        </div>
+    }
+}

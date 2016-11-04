@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="emailmessenger" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^D:\\Projects2\\ContactFormWithEmail\\ContactFormWithEmail\\obj\\Release\\Package\\PackageTmp$" />
+    <parameterEntry kind="ProviderPath" scope="setAcl" match="^D:\\Projects2\\ContactFormWithEmail\\ContactFormWithEmail\\obj\\Release\\Package\\PackageTmp$" />
+  </parameter>
+  <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=mssql4.gear.host;Initial Catalog=emailmessages;User ID=emailmessages;Password=Eq918~64-36w" tags="">
+    <parameterEntry kind="XmlFile" scope="D:\\Projects2\\ContactFormWithEmail\\ContactFormWithEmail\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
+  </parameter>
+</parameters>
