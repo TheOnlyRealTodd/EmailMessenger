@@ -13,8 +13,6 @@ D:\Projects2\ContactFormWithEmail\ContactFormWithEmail\bin\roslyn\VBCSCompiler.e
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail\bin\ContactFormWithEmail.dll.config
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail\bin\ContactFormWithEmail.dll
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail\bin\ContactFormWithEmail.pdb
-D:\Projects2\ContactFormWithEmail\ContactFormWithEmail\bin\ContactFormWithEmail.dll.CodeAnalysisLog.xml
-D:\Projects2\ContactFormWithEmail\ContactFormWithEmail\bin\ContactFormWithEmail.dll.lastcodeanalysissucceeded
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail\bin\Antlr3.Runtime.dll
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail\bin\EntityFramework.dll
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail\bin\EntityFramework.SqlServer.dll
@@ -39,7 +37,6 @@ D:\Projects2\ContactFormWithEmail\ContactFormWithEmail\bin\Microsoft.Practices.U
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail\bin\Microsoft.Web.Infrastructure.dll
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail\bin\Newtonsoft.Json.dll
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail\bin\Owin.dll
-D:\Projects2\ContactFormWithEmail\ContactFormWithEmail\bin\SendGrid.CSharp.HTTP.Client.dll
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail\bin\SendGrid.dll
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail\bin\SendGrid.SmtpApi.dll
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail\bin\SendGridMail.dll

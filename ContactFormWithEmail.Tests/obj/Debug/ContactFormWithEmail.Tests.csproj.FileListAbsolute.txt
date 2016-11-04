@@ -13,8 +13,6 @@ D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\roslyn\VB
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\ContactFormWithEmail.Tests.dll.config
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\ContactFormWithEmail.Tests.dll
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\ContactFormWithEmail.Tests.pdb
-D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\ContactFormWithEmail.Tests.dll.CodeAnalysisLog.xml
-D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\ContactFormWithEmail.Tests.dll.lastcodeanalysissucceeded
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\ContactFormWithEmail.dll
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\Microsoft.Web.Infrastructure.dll
