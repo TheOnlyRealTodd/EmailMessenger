@@ -65,3 +65,5 @@ D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\Microsoft
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\obj\Debug\ContactFormWithEmail.Tests.csprojResolveAssemblyReference.cache
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\obj\Debug\ContactFormWithEmail.Tests.dll
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\obj\Debug\ContactFormWithEmail.Tests.pdb
+D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\nunit.framework.dll
+D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\nunit.framework.xml

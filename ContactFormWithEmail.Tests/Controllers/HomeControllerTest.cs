@@ -6,46 +6,49 @@ using System.Web.Mvc;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ContactFormWithEmail;
 using ContactFormWithEmail.Controllers;
+using NUnit.Framework;
+using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
 namespace ContactFormWithEmail.Tests.Controllers
 {
-    [TestClass]
+    [TestFixture]
     public class HomeControllerTest
     {
-        [TestMethod]
-        public void Index()
+        [Test]
+        public void Index_Returns_RedirectResult()
         {
             // Arrange
             HomeController controller = new HomeController();
 
             // Act
-            ViewResult result = controller.Index() as ViewResult;
-
-            // Assert
-            Assert.IsNotNull(result);
+            RedirectToRouteResult result = controller.Index() as RedirectToRouteResult;
+            
+            // Assert - Testing the route value since the return type is a RedirectToAction
+            Assert.AreEqual("Index",result.RouteValues["action"]);
+            Assert.AreEqual("Form", result.RouteValues["controller"]);
         }
 
-        [TestMethod]
+        [Test]
         public void About()
         {
             // Arrange
             HomeController controller = new HomeController();
 
             // Act
-            ViewResult result = controller.About() as ViewResult;
+            ActionResult result = controller.About() as HttpNotFoundResult;
 
             // Assert
-            Assert.AreEqual("Your application description page.", result.ViewBag.Message);
+            Assert.IsNotNull(result);
         }
 
-        [TestMethod]
+        [Test]
         public void Contact()
         {
             // Arrange
             HomeController controller = new HomeController();
 
             // Act
-            ViewResult result = controller.Contact() as ViewResult;
+            ActionResult result = controller.Contact() as HttpNotFoundResult;
 
             // Assert
             Assert.IsNotNull(result);
