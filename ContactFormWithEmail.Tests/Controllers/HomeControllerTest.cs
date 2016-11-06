@@ -29,7 +29,7 @@ namespace ContactFormWithEmail.Tests.Controllers
         }
 
         [Test]
-        public void About()
+        public void About_Returns_HttpNotFoundResult()
         {
             // Arrange
             HomeController controller = new HomeController();
@@ -42,7 +42,7 @@ namespace ContactFormWithEmail.Tests.Controllers
         }
 
         [Test]
-        public void Contact()
+        public void Contact_Returns_HttpNotFoundResult()
         {
             // Arrange
             HomeController controller = new HomeController();
