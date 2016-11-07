@@ -9,7 +9,9 @@ namespace ContactFormWithEmail.Models
         public string SenderName { get; set; }
         public string Subject { get; set; }
         [DomainsNotAllowed]
+        [EmailAddress]
         public string SenderEmail { get; set; }
+        [EmailAddress]
         public string RecipientEmail { get; set; }
         [MaxLength(2000)]
         public string Body { get; set; }
