@@ -69,3 +69,4 @@ D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\nunit.fra
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\nunit.framework.xml
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\Moq.dll
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\Moq.xml
+D:\Projects2\ContactFormWithEmail\ContactFormWithEmail.Tests\bin\Debug\TestStack.FluentMVCTesting.dll

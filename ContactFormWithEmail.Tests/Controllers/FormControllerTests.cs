@@ -10,6 +10,7 @@ using ContactFormWithEmail.Services;
 using ContactFormWithEmail.ViewModels;
 using Moq;
 using NUnit.Framework;
+using TestStack.FluentMVCTesting;
 
 namespace ContactFormWithEmail.Tests.Controllers
 {
@@ -27,24 +28,15 @@ namespace ContactFormWithEmail.Tests.Controllers
              _controller = new FormController(_mockRepository.Object, _mockTheEmailService.Object);
         }
 
-        [Test]
-        public void Index_Returns_Index_ViewResult()
-        {
-            //Act
-            ViewResult result = _controller.Index();
-
-            //Assert
-            Assert.AreEqual("index",result.ViewName);
-        }
 
         [Test]
-        public void Index_WhenCalled_ShouldReturnMessageViewModelInstance()
+        public void Index_WhenCalled_ShouldReturnIndexWithMessageViewModelInstance()
         {
-            //Act
-            ViewResult result = _controller.Index();
+            //Act & Assert
 
-            //Assert
-            Assert.IsInstanceOf<MessageViewModel>(result.Model);
+            _controller.WithCallTo(c => c.Index())
+                .ShouldRenderView("index")
+                .WithModel<MessageViewModel>();
         }
 
         [Test]
@@ -69,16 +61,17 @@ namespace ContactFormWithEmail.Tests.Controllers
 
             FormController controller = new FormController(_mockRepository.Object, _mockTheEmailService.Object);
 
-            //Act
-            ViewResult result = controller.Emails();
-
-            //Assert
-            Assert.IsInstanceOf<List<Message>>(result.Model);
+            //Act & Assert
+            _controller
+                .WithCallTo(c => c.Emails())
+                .ShouldRenderDefaultView()
+                .WithModel<IList<Message>>();
 
         }
 
+
         [Test]
-        public void Save_GivenValidMessage_ShouldReturnRedirectToRouteResult()
+        public void Save_GivenValidMessage_ShouldReturnReturnIndexViewWithViewModel()
         {
             //Arrange
             Message mockMessage = new Message
@@ -92,30 +85,9 @@ namespace ContactFormWithEmail.Tests.Controllers
                 TimeStamp = DateTime.Now
             };
 
-            //Act
-            var result = _controller.Save(mockMessage);
-            //Assert
-            Assert.IsInstanceOf<RedirectToRouteResult>(result);
-        }
-        [Test]
-        public void Save_GivenValidMessage_ShouldReturnRedirectToSendEmail()
-        {
-            //Arrange
-            Message mockMessage = new Message
-            {
-                Body = "This is a mocked message.",
-                Id = 1,
-                RecipientEmail = "Test@Test.com",
-                SenderEmail = "ToddCullum@gmail.com",
-                SenderName = "Todd Cullum",
-                Subject = "Test Subject",
-                TimeStamp = DateTime.Now
-            };
-
-            //Act - Must cast to RedirectToRouteResult to get RouteValues access
-            var result = _controller.Save(mockMessage) as RedirectToRouteResult;
-            //Assert
-            Assert.AreEqual("SendEmail", result.RouteValues["action"]);
+            //Act & Assert
+            _controller.WithCallTo(c => c.Save(mockMessage))
+                .ShouldRenderView("index").WithModel<MessageViewModel>();
         }
 
         [Test]
@@ -124,10 +96,12 @@ namespace ContactFormWithEmail.Tests.Controllers
             //Arrange
             Message mockMessage = null;
 
-            //Act - Must cast to RedirectToRouteResult to get RouteValues access
-            var result = _controller.Save(mockMessage) as ViewResult;
-            //Assert
-            Assert.IsNotNull(result);
+            //Act & Assert
+            _controller
+                .WithCallTo(c => c.Save(mockMessage))
+                .ShouldRenderView("index")
+                .WithModel<MessageViewModel>();
+
         }
 
 

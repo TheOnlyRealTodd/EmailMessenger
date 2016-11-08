@@ -41,27 +41,27 @@ namespace ContactFormWithEmail.Controllers
         //HTTP POST: Form - [Bind] added to parameter to prevent the route from adding a null Id to the model
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Save([Bind(Exclude = "Id")] Message message)
+        public async Task<ActionResult> Save([Bind(Exclude = "Id")] Message message)
         {
              
             if (!ModelState.IsValid || message == null)
             {
-                var viewModel = new MessageViewModel(message);
+                var viewModel = new MessageViewModel(new Message());
                 return View("index",viewModel);
             }
 
             message.TimeStamp = DateTime.UtcNow;
             _messageRepository.Add(message);
-            return RedirectToAction("SendEmail",message);
-            //return RedirectToAction("Index","Form");
+            await SendEmail(message);
+            var viewModelNew = new MessageViewModel(new Message()) {Success = true};
+            return View("index",viewModelNew);
+
         }
 
-        public async Task<ActionResult> SendEmail(Message message)
+        public async Task SendEmail(Message message)
         {
            await _sendGrid.SendAsync(message);
-            MessageViewModel viewModel = new MessageViewModel(new Message());
-            viewModel.Success = true;
-            return View("index",viewModel);
+            
         }
     }
 }
