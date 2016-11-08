@@ -44,7 +44,7 @@ namespace ContactFormWithEmail.Controllers
         public ActionResult Save([Bind(Exclude = "Id")] Message message)
         {
              
-            if (!ModelState.IsValid)
+            if (!ModelState.IsValid || message == null)
             {
                 var viewModel = new MessageViewModel(message);
                 return View("index",viewModel);
