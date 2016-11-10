@@ -86,3 +86,4 @@ D:\Projects2\ContactFormWithEmail\ContactFormWithEmail\obj\Release\ContactFormWi
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail\obj\Release\ContactFormWithEmail.csproj.GenerateResource.Cache
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail\obj\Release\ContactFormWithEmail.dll
 D:\Projects2\ContactFormWithEmail\ContactFormWithEmail\obj\Release\ContactFormWithEmail.pdb
+D:\Projects2\ContactFormWithEmail\ContactFormWithEmail\obj\Release\ContactFormWithEmail.Migrations.AddUserIdToMessageEntity.resources

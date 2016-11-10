@@ -41,7 +41,7 @@ namespace ContactFormWithEmail.Tests.Controllers
 
         [Test]
         public void Emails_WhenCalled_ShouldReturnListOfMessages()
-        {
+        {//TODO: Update this test for the new conditional
             //Arrange
             //Create a mock Message to be returned in place of DB data.
             List<Message> listOfMessages = new List<Message>();
@@ -73,6 +73,7 @@ namespace ContactFormWithEmail.Tests.Controllers
         [Test]
         public void Save_GivenValidMessage_ShouldReturnReturnIndexViewWithViewModel()
         {
+            //
             //Arrange
             Message mockMessage = new Message
             {

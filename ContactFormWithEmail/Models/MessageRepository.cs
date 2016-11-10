@@ -50,6 +50,13 @@ namespace ContactFormWithEmail.Models
             }
         }
 
+        public IList<Message> FindAny(Expression<Func<Message, bool>> predicate)
+        {
+            using (ApplicationDbContext _context = new ApplicationDbContext())
+            {
+                return _context.Set<Message>().Where(predicate).ToList();
+            }
+        }
 
 
         public void PersistChanges()

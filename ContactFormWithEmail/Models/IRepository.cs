@@ -12,6 +12,7 @@ namespace ContactFormWithEmail.Models
         TEntity SingleOrDefault(Expression<Func<TEntity, bool>> predicate);
 
         void Add(TEntity entity);
+        IList<TEntity> FindAny(Expression<Func<TEntity, bool>> predicate);
 
         void PersistChanges();
 

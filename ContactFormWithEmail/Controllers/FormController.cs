@@ -5,6 +5,7 @@ using System.Web.Mvc;
 using ContactFormWithEmail.Models;
 using ContactFormWithEmail.ViewModels;
 using ContactFormWithEmail.Services;
+using Microsoft.AspNet.Identity;
 
 namespace ContactFormWithEmail.Controllers
 {
@@ -31,9 +32,12 @@ namespace ContactFormWithEmail.Controllers
 
         public ViewResult Emails()
         {
-            IList<Message> allMessagesInDb = _messageRepository.GetAll();
-
-            return View(allMessagesInDb);
+            string currentUserId = User.Identity.GetUserId();
+            IList<Message> messagesWhereUserIdMatches =
+                _messageRepository.FindAny(u => u.UserId == currentUserId);
+            if (messagesWhereUserIdMatches.Count == 0)
+                return View("NoMessagesToDisplay");
+            return View(messagesWhereUserIdMatches);
             
         }
 
@@ -49,8 +53,14 @@ namespace ContactFormWithEmail.Controllers
                 var viewModel = new MessageViewModel(new Message());
                 return View("index",viewModel);
             }
+            //Get the current user Id
+            string currentUserId = User.Identity.GetUserId();
 
+            //If the ID is null, send user to register
+            if (currentUserId == null)
+                return RedirectToAction("Register", "Account");
             message.TimeStamp = DateTime.UtcNow;
+            message.UserId = currentUserId;
             _messageRepository.Add(message);
             await SendEmail(message);
             var viewModelNew = new MessageViewModel(new Message()) {Success = true};
